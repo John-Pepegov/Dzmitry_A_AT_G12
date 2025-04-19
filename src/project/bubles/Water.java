@@ -5,5 +5,4 @@ public abstract class Water {
     protected int transparency;
     protected String smell;
     protected int temperature;
-    protected double volume;
 }

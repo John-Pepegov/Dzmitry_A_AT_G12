@@ -1,19 +1,11 @@
 package project.bubles;
 
-public class Bubble {
-    private final double volume = 0.3;
-    private String gasContent;
+class Bubble {
+    private final double volume = 0.3; // в мм2
+    private String gasComposition;
 
-    public Bubble(String gasContent) {
-        this.gasContent = gasContent;
-    }
-
-    public String getGasContent() {
-        return gasContent;
-    }
-
-    public void setGasContent(String gasContent) {
-        this.gasContent = gasContent;
+    public Bubble(String gasComposition) {
+        this.gasComposition = gasComposition;
     }
 
     public void pop() {
