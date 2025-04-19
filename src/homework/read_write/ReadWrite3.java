@@ -6,8 +6,8 @@ public class ReadWrite3 {
     // читает текст из файла, убирает из него все гласные и записывает новый текст в тот же файл, затирая оригинал
 
     public static void main(String[] args) {
-        File originalFile = new File("rewrite.txt");
-        File tempFile = new File("rewrite_temp.txt");
+        File originalFile = new File("test_data/ReadWrite3.txt");
+        File tempFile = new File("test_data/ReadWrite3_temp.txt");
 
         try (
                 BufferedReader reader = new BufferedReader(new FileReader(originalFile));
@@ -21,15 +21,18 @@ public class ReadWrite3 {
             }
 
         } catch (IOException e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
+            return;
         }
 
         if (originalFile.delete()) {
-            if (!tempFile.renameTo(originalFile)) {
-                System.out.println("Не удалось переименовать файл.");
+            if (tempFile.renameTo(originalFile)) {
+                System.out.println("File processed successfully.");
+            } else {
+                System.err.println("Failed to rename the file.");
             }
         } else {
-            System.out.println("Не удалось удалить оригинальный файл.");
+            System.err.println("Failed to delete the original file.");
         }
     }
 }
