@@ -1,27 +1,17 @@
-/*
 package project.bubles;
 
 public class Bottle {
-    //- создать класс Bottle
-    //- у него есть объем
-    //- есть вода
-    //- есть метод open(), который вызывает метод degas() в газировке
     private double volume;
+    private SparklingWater water;
 
-    public Bottle(double volume) {
+    public Bottle(double volume, SparklingWater water) {
         this.volume = volume;
+        this.water = water;
     }
 
-    public double getVolume() {
-        return volume;
-    }
-
-    public void setVolume(double volume) {
-        this.volume = volume;
-    }
-
-    public void open(SparklingWater sparklingWater) {
-        sparklingWater.degas();
+    public void open() {
+        if (water != null) {
+            water.degas();
+        }
     }
 }
-*/

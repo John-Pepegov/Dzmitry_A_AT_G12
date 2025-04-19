@@ -1,28 +1,22 @@
-/*
 package project.bubles;
 
 public class Bubble {
-    //- создать класс Bubble
-    //- у пузырька должен быть объем, газовый состав
-    //- он должен уметь лопаться с выводом в консоль «Cramp!»
-    //- объем пузырька постоянный и равен 0.3 мм3, а газовый состав переменный в зависимости от образующего газа и задается в конструкторе класса
-    final double VOLUME = 0.3;
-    private String content;
+    private final double volume = 0.3;
+    private String gasContent;
 
-    public Bubble(String content) {
-        this.content = content;
+    public Bubble(String gasContent) {
+        this.gasContent = gasContent;
     }
 
-    public String getContent() {
-        return content;
+    public String getGasContent() {
+        return gasContent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setGasContent(String gasContent) {
+        this.gasContent = gasContent;
     }
 
     public void pop() {
         System.out.println("Cramp!");
     }
 }
-*/

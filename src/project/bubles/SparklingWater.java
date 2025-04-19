@@ -1,15 +1,23 @@
-/*
 package project.bubles;
 
-public class SparklingWater extends Water{
-    //- создать класс SparklingWater, являющийся дочерним Water
-    //- у газировки есть пузырьки
-    //- вода заполняется пузырьками при упаковке на заводе, для этого у нее есть метод pump(Bubble[] bubbles)
-    //- 1 литр воды содержит 10000 пузырьков
-    //- у газировки есть метод degas(), который удаляет пузырьки по одному и вызывает их лопанье
-    public void pump(Bubble[] bubbles);
+public class SparklingWater extends Water {
+    private Bubble[] bubbles;
+    private int bubblesCount;
 
-    public void degas
+    public void pump(Bubble[] bubbles) {
+        this.bubbles = bubbles;
+        this.bubblesCount = bubbles.length;
+    }
 
+    public void degas() {
+        if (bubbles == null) {
+            System.out.println("Нет пузырьков для выпуска.");
+            return;
+        }
+        for (int i = 0; i < bubblesCount; i++) {
+            bubbles[i].pop();
+        }
+        bubbles = null;
+        bubblesCount = 0;
+    }
 }
-*/
