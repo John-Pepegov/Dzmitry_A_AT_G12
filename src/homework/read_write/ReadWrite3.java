@@ -3,7 +3,7 @@ package homework.read_write;
 import java.io.*;
 
 public class ReadWrite3 {
-    //читает текст из файла, убирает из него все гласные и записывает новый текст в тот же файл, затирая оригинал
+    // читает текст из файла, убирает из него все гласные и записывает новый текст в тот же файл, затирая оригинал
 
     public static void main(String[] args) {
         File originalFile = new File("rewrite.txt");

@@ -3,7 +3,7 @@ package homework.read_write;
 import java.util.Scanner;
 
 public class ReadWrite1 {
-    //выводит в консоль фразу "Hello, I just got 'X' from you!", где Х - фраза, вводимая в консоль с клавиатуры
+    // выводит в консоль фразу "Hello, I just got 'X' from you!", где Х - фраза, вводимая в консоль с клавиатуры
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
