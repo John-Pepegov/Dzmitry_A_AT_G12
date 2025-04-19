@@ -1,4 +1,4 @@
-package homework;
+package homework.read_write;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ public class ReadWrite2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("read_write.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("homework.read_write.txt", true))) {
             while (scanner.hasNext()) {
                 String incoming = scanner.nextLine();
                 if (incoming.toLowerCase().contains("стоп")) {
