@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class ReadWrite2 {
-    //записывает в файл фразу "Hello, I just got 'X' from you!", где Х - фраза, вводимая в консоль с клавиатуры
+    // записывает в файл фразу "Hello, I just got 'X' from you!", где Х - фраза, вводимая в консоль с клавиатуры
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("homework.read_write.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("ReadWrite2.txt", true))) {
             while (scanner.hasNext()) {
                 String incoming = scanner.nextLine();
                 if (incoming.toLowerCase().contains("стоп")) {
