@@ -11,19 +11,23 @@ public class ReadWrite2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("ReadWrite2.txt", true))) {
-            while (scanner.hasNext()) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("test_data/ReadWrite2.txt", true))) {
+            while (true) {
+                System.out.print("Type your text here or type 'stop' to exit: ");
                 String incoming = scanner.nextLine();
-                if (incoming.toLowerCase().contains("стоп")) {
+
+                if (incoming.equalsIgnoreCase("stop")) {
+                    System.out.println("Program stopped.");
                     break;
                 }
+
                 String result = "Hello, I just got '" + incoming + "' from you!";
                 System.out.println(result);
                 writer.write(result);
                 writer.newLine();
             }
         } catch (IOException e) {
-            System.out.println("An error occurred: " + e.getMessage());
+            System.err.println("An error occurred: " + e.getMessage());
         }
     }
 }
