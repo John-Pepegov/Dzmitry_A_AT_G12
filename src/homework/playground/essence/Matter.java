@@ -14,4 +14,8 @@ public abstract class Matter {
     public void setMass(int mass) {
         this.mass = mass;
     }
+
+    public String getName() {
+        return null;
+    }
 }
