@@ -1,4 +1,4 @@
-package classwork.cw_previous;
+package classwork.cw_0;
 
 import java.util.Scanner;
 
