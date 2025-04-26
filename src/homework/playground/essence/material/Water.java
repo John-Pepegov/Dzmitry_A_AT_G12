@@ -1,4 +1,4 @@
 package homework.playground.essence.material;
 
-public class Water {
+public class Water extends Matter implements Pourable {
 }
