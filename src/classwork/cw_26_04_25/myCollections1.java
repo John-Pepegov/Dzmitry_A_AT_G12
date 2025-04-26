@@ -3,7 +3,7 @@ package classwork.cw_26_04_25;
 import java.util.ArrayList;
 import java.util.List;
 
-public class myCollections {
+public class myCollections1 {
     public static void main(String[] args) {
         List<String> myList = new ArrayList<>();
 
