@@ -1,4 +1,4 @@
 package homework.playground.essence.material;
 
-public class Petrol {
+public class Petrol extends Matter implements Pourable, Powerable {
 }
