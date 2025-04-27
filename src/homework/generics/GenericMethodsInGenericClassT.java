@@ -10,6 +10,7 @@ public class GenericMethodsInGenericClassT<T> {
     }
 
     public <C> void genericMethodHalfGenArgs(C c, String s) {
-        System.out.println("I got an object of " + c.getClass().getSimpleName() + " class and string with " + s.length() + " characters");
+        System.out.println("I got an object of " + c.getClass().getSimpleName()
+                + " class and string with " + s.length() + " characters");
     }
 }
