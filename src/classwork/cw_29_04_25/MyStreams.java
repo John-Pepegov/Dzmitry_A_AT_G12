@@ -32,7 +32,7 @@ public class MyStreams {
         List<String> value5 = list.stream().skip(2).limit(2).toList();
         System.out.println(value5);
 
-        List<String> value6 = list.stream().filter(x -> x.contains("м")).toList();
+        List<String> value6 = list.stream().filter(x -> x.contains("м")).distinct().toList();
         System.out.println(value6);
     }
 }
