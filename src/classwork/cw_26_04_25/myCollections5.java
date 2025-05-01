@@ -1,7 +1,6 @@
 package classwork.cw_26_04_25;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class myCollections5 {
