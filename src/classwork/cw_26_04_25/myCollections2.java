@@ -41,6 +41,5 @@ public class myCollections2 {
         }
         System.out.println("myLinkedList get: " + (System.nanoTime() - startTime1) / 1_000_000_000.0 + " seconds");
         System.out.println("----------------------");
-
     }
 }
