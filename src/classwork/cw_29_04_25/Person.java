@@ -7,11 +7,21 @@ public class Person {
     public Sex sex;
 
     public Person(String name, int age, Sex sex) {
-        this.name= name;
+        this.name = name;
         this.age = age;
         this.sex = sex;
     }
+
     public enum Sex {
         MAN, WOMAN
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                '}';
     }
 }

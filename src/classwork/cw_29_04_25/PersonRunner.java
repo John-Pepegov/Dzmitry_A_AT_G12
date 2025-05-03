@@ -1,7 +1,10 @@
 package classwork.cw_29_04_25;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 public class PersonRunner {
 
@@ -31,5 +34,28 @@ public class PersonRunner {
                 || (x.sex == Person.Sex.MAN && x.age >= 18 && x.age < 60)).count();
 
         System.out.println("Количество потенциально работоспособных людей: " + counter2);
+        System.out.println("--------------------------------------");
+
+        List<Person> sortedPeople1 = people.stream()
+                .sorted((x, y) -> {
+                    if (x.sex == y.sex) {
+                        return (x.age - y.age);
+                    } else {
+                        return x.sex.compareTo(y.sex);
+                    }
+                })
+                .toList();
+
+        System.out.println("Отсортированный лист: " + sortedPeople1);
+        System.out.println("--------------------------------------");
+
+        List<Person> sortedPeople2 = people.stream()
+                .sorted(
+                        Comparator.comparing((Person p) -> p.sex)
+                                .thenComparing(p -> p.age)
+                )
+                .toList();
+
+        System.out.println("Отсортированный лист: " + sortedPeople2);
     }
 }

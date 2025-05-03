@@ -1,6 +1,7 @@
 package classwork.cw_29_04_25;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -57,5 +58,23 @@ public class MyStreams {
                 .filter(x -> !x.isEmpty())
                 .toList();
         System.out.println("10: " + value10);
+
+        // Отсортировать коллекцию строк по алфавиту
+        List<String> value11 = list.stream().sorted().toList();
+        System.out.println("11: " + value11);
+
+        List<String> value12 = list.stream()
+                .distinct()
+                .sorted((x, y) -> -x.compareTo(y)).toList();
+        System.out.println("12: " + value12);
+
+        // Разделить слова по символам, отпечатать результат, выбрать символ с максимальным значением среди букв
+        System.out.print("13: ");
+        String value13 = list.stream()
+                .flatMap(x -> Arrays.stream(x.split("")))
+                .peek(x -> System.out.print(x + " "))
+                .max(String::compareTo)
+                .get();
+        System.out.print("- " + value13);
     }
 }
