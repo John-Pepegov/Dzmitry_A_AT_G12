@@ -1,22 +1,22 @@
-package homework.collections;
+package homework.collections.entities;
 
 import java.util.Objects;
 
-public class Person {
-    private int age;
+public class Sand {
+    private int weight;
     private String name;
 
-    public Person(int age, String name) {
-        this.age = age;
+    public Sand(int weight, String name) {
+        this.weight = weight;
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public String getName() {
@@ -29,8 +29,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "age=" + age +
+        return "Sand{" +
+                "weight=" + weight +
                 ", name='" + name + '\'' +
                 '}';
     }
@@ -38,12 +38,12 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name);
+        Sand sand = (Sand) o;
+        return weight == sand.weight && Objects.equals(name, sand.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(age, name);
+        return Objects.hash(weight, name);
     }
 }
