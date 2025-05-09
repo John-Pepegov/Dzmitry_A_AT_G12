@@ -5,8 +5,10 @@ import java.util.List;
 
 public class ButterflyList {
     public static void main(String[] args) {
+        // Создать пустой список стрингов butterflies (через new ArrayList)
         List<String> butterflies = new ArrayList<>();
 
+        // Добавить в список 4 бабочек (Common blue, Swallowtail, Aglais io, Common blue)
         butterflies.add("Common blue");
         butterflies.add("Swallowtail");
         butterflies.add("Aglais io");

@@ -8,6 +8,8 @@ import java.util.List;
 
 public class FigureList {
     public static void main(String[] args) {
+        // Создать список строк стрингов figures из 5 фигур (Овал, Прямоугольник, Круг, Квадрат, Эллипс)
+        // через (Arrays.asList())
         List<String> figures = new ArrayList<>(Arrays.asList(
                 "Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс"
         ));
