@@ -1,22 +1,22 @@
-package homework.collections;
+package homework.collections.entities;
 
 import java.util.Objects;
 
-public class Bubble {
-    private int volume;
+public class Person {
+    private int age;
     private String name;
 
-    public Bubble(int volume, String name) {
-        this.volume = volume;
+    public Person(int age, String name) {
+        this.age = age;
         this.name = name;
     }
 
-    public int getVolume() {
-        return volume;
+    public int getAge() {
+        return age;
     }
 
-    public void setVolume(int volume) {
-        this.volume = volume;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getName() {
@@ -29,8 +29,8 @@ public class Bubble {
 
     @Override
     public String toString() {
-        return "Bubble{" +
-                "volume=" + volume +
+        return "Person{" +
+                "age=" + age +
                 ", name='" + name + '\'' +
                 '}';
     }
@@ -38,12 +38,12 @@ public class Bubble {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Bubble bubble = (Bubble) o;
-        return volume == bubble.volume && Objects.equals(name, bubble.name);
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(volume, name);
+        return Objects.hash(age, name);
     }
 }

@@ -1,4 +1,4 @@
-package homework.collections;
+package homework.collections.entities;
 
 import java.util.Objects;
 

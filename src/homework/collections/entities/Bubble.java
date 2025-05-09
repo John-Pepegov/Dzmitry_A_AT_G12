@@ -1,22 +1,22 @@
-package homework.collections;
+package homework.collections.entities;
 
 import java.util.Objects;
 
-public class Sand {
-    private int weight;
+public class Bubble {
+    private int volume;
     private String name;
 
-    public Sand(int weight, String name) {
-        this.weight = weight;
+    public Bubble(int volume, String name) {
+        this.volume = volume;
         this.name = name;
     }
 
-    public int getWeight() {
-        return weight;
+    public int getVolume() {
+        return volume;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     public String getName() {
@@ -29,8 +29,8 @@ public class Sand {
 
     @Override
     public String toString() {
-        return "Sand{" +
-                "weight=" + weight +
+        return "Bubble{" +
+                "volume=" + volume +
                 ", name='" + name + '\'' +
                 '}';
     }
@@ -38,12 +38,12 @@ public class Sand {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Sand sand = (Sand) o;
-        return weight == sand.weight && Objects.equals(name, sand.name);
+        Bubble bubble = (Bubble) o;
+        return volume == bubble.volume && Objects.equals(name, bubble.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(weight, name);
+        return Objects.hash(volume, name);
     }
 }
