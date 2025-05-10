@@ -11,14 +11,13 @@ public class ElementMap {
 
         // Добавить в список 7 элементов (Silicon, Sulfur, Argon, Calcium, Chromium, Iron, Zinc)
         // с ключами, равными порядку их добавления в коллекцию, начиная с 1-цы
-        int key = 1;
-        elements.put(key++, "Silicon");
-        elements.put(key++, "Sulfur");
-        elements.put(key++, "Argon");
-        elements.put(key++, "Calcium");
-        elements.put(key++, "Chromium");
-        elements.put(key++, "Iron");
-        elements.put(key++, "Zinc");
+        elements.put(1, "Silicon");
+        elements.put(2, "Sulfur");
+        elements.put(3, "Argon");
+        elements.put(4, "Calcium");
+        elements.put(5, "Chromium");
+        elements.put(6, "Iron");
+        elements.put(7, "Zinc");
 
         // Проитерировать коллекцию через for-each и отпечатать название элементов в консоль через пробел
         System.out.print("Названия: ");
