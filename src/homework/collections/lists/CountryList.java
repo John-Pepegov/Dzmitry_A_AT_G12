@@ -8,7 +8,7 @@ public class CountryList {
         List<String> countries = new ArrayList<>();
 
         // Добавить в список 4 страны (Андора, Португалия, Англия, Замбия)
-        countries.add("Андора");
+        countries.add("Андорра");
         countries.add("Португалия");
         countries.add("Англия");
         countries.add("Замбия");
