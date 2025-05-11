@@ -1,5 +1,6 @@
 package homework.streams;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
@@ -13,9 +14,9 @@ public class NumbersModRunner {
                 .map(String::valueOf)
                 .filter(x -> x.contains("3"))
                 // Разбить числа на отдельные цифры
-                .flatMap(x -> x.chars()
+                .flatMap(x -> Arrays.stream(x.split(""))
                         // Заменить цифры соответствующими словами
-                        .mapToObj(c -> digits[c - '0']))
+                        .map(c -> digits[Integer.parseInt(c)]))
                 // Оставить только уникальные слова
                 .distinct()
                 // Отсортировать в нисходящем порядке
