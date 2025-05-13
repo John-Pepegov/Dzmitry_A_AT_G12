@@ -12,7 +12,7 @@ public class WaterList {
         List<Water> water = Arrays.asList(
                 new Water("Прозрачная", "Нет"),
                 new Water("Прозрачная", "Нет"),
-                new Water("Мутная",     "Аммиачный")
+                new Water("Мутная", "Аммиачный")
         );
 
         // Проитерировать список через for-each и отпечатать пары цвет-вода через тире в консоль с новой строки
