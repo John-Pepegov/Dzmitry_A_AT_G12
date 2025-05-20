@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import homework.people.ManualEngineer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ManualEngineerJUnitTest {
 
@@ -21,8 +21,12 @@ public class ManualEngineerJUnitTest {
     }
 
     @Test
-    public void testConstructorSetsExperienceAndSkill() {
+    public void testConstructorSetsExperience() {
         assertEquals(5 * 2, engineer.getExperience());
+    }
+
+    @Test
+    public void testConstructorSetsSkill() {
         assertEquals(5 * 2, engineer.getSkill());
     }
 
