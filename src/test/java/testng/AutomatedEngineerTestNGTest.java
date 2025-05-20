@@ -21,8 +21,12 @@ public class AutomatedEngineerTestNGTest {
     }
 
     @Test
-    public void testConstructorSetsExperienceAndSkill() {
+    public void testConstructorSetsExperience() {
         assertEquals(engineer.getExperience(), 12);
+    }
+
+    @Test
+    public void testConstructorSetsSkill() {
         assertEquals(engineer.getSkill(), 12);
     }
 
