@@ -1,4 +1,4 @@
-package homework.read_write;
+package homework.readwrite;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
