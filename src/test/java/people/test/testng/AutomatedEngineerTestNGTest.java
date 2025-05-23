@@ -1,50 +1,50 @@
-package junit;
+package people.test.testng;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import homework.people.AutomatedEngineer;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
 
-public class AutomatedEngineerJUnitTest {
+public class AutomatedEngineerTestNGTest {
 
     private AutomatedEngineer engineer;
 
-    @Before
+    @BeforeMethod
     public void setUp() {
-        engineer = new AutomatedEngineer(30, 4); // skill должен быть 12
+        engineer = new AutomatedEngineer(30, 4); // skill = 4 * 3 = 12
     }
 
     @Test
     public void testConstructorSetsAge() {
-        assertEquals(30, engineer.getAge());
+        assertEquals(engineer.getAge(), 30);
     }
 
     @Test
     public void testConstructorSetsExperience() {
-        assertEquals(4 * 3, engineer.getExperience());
+        assertEquals(engineer.getExperience(), 12);
     }
 
     @Test
     public void testConstructorSetsSkill() {
-        assertEquals(4 * 3, engineer.getSkill());
+        assertEquals(engineer.getSkill(), 12);
     }
 
     @Test
     public void testSetAndGetSkill() {
         engineer.setSkill(20);
-        assertEquals(20, engineer.getSkill());
+        assertEquals(engineer.getSkill(), 20);
     }
 
     @Test
     public void testSetAndGetExperience() {
         engineer.setExperience(7);
-        assertEquals(7, engineer.getExperience());
+        assertEquals(engineer.getExperience(), 7);
     }
 
     @Test
     public void testSetAndGetAge() {
         engineer.setAge(40);
-        assertEquals(40, engineer.getAge());
+        assertEquals(engineer.getAge(), 40);
     }
 }
