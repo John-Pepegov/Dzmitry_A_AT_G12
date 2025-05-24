@@ -1,8 +1,8 @@
-package people.test.junit;
+package homework.people.junit;
 
+import homework.people.AutomatedEngineer;
 import org.junit.Before;
 import org.junit.Test;
-import homework.people.AutomatedEngineer;
 
 import static org.junit.Assert.assertEquals;
 

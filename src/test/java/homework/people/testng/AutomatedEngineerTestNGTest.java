@@ -1,8 +1,8 @@
-package people.test.testng;
+package homework.people.testng;
 
+import homework.people.AutomatedEngineer;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import homework.people.AutomatedEngineer;
 
 import static org.testng.Assert.assertEquals;
 
