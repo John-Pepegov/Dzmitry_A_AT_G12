@@ -20,17 +20,20 @@ public class EngineerTestNGTest {
 
     @Test(dataProvider = "constructorData")
     public void testConstructorSetsAge(Engineer engineer, int expectedAge, int expectedExperience, int expectedSkill) {
-        assertEquals(engineer.getAge(), expectedAge);
+        assertEquals(engineer.getAge(), expectedAge,
+                "Incorrect age set by constructor for " + engineer.getClass().getSimpleName());
     }
 
     @Test(dataProvider = "constructorData")
     public void testConstructorSetsExperience(Engineer engineer, int expectedAge, int expectedExperience, int expectedSkill) {
-        assertEquals(engineer.getExperience(), expectedExperience);
+        assertEquals(engineer.getExperience(), expectedExperience,
+                "Incorrect experience set by constructor for " + engineer.getClass().getSimpleName());
     }
 
     @Test(dataProvider = "constructorData")
     public void testConstructorSetsSkill(Engineer engineer, int expectedAge, int expectedExperience, int expectedSkill) {
-        assertEquals(engineer.getSkill(), expectedSkill);
+        assertEquals(engineer.getSkill(), expectedSkill,
+                "Incorrect skill set by constructor for " + engineer.getClass().getSimpleName());
     }
 
     @DataProvider(name = "setterData")
@@ -44,18 +47,21 @@ public class EngineerTestNGTest {
     @Test(dataProvider = "setterData")
     public void testSetAndGetSkill(Engineer engineer) {
         engineer.setSkill(42);
-        assertEquals(engineer.getSkill(), 42);
+        assertEquals(engineer.getSkill(), 42,
+                "Skill getter/setter returned unexpected value for " + engineer.getClass().getSimpleName());
     }
 
     @Test(dataProvider = "setterData")
     public void testSetAndGetExperience(Engineer engineer) {
         engineer.setExperience(88);
-        assertEquals(engineer.getExperience(), 88);
+        assertEquals(engineer.getExperience(), 88,
+                "Experience getter/setter returned unexpected value for " + engineer.getClass().getSimpleName());
     }
 
     @Test(dataProvider = "setterData")
     public void testSetAndGetAge(Engineer engineer) {
         engineer.setAge(55);
-        assertEquals(engineer.getAge(), 55);
+        assertEquals(engineer.getAge(), 55,
+                "Age getter/setter returned unexpected value for " + engineer.getClass().getSimpleName());
     }
 }

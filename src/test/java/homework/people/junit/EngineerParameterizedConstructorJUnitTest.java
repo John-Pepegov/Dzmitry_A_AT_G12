@@ -37,16 +37,19 @@ public class EngineerParameterizedConstructorJUnitTest {
 
     @Test
     public void testConstructorSetsAge() {
-        assertEquals(expectedAge, engineer.getAge());
+        assertEquals("Constructor did not set correct age for " + engineer.getClass().getSimpleName(),
+                expectedAge, engineer.getAge());
     }
 
     @Test
     public void testConstructorSetsExperience() {
-        assertEquals(expectedExperience, engineer.getExperience());
+        assertEquals("Constructor did not set correct experience for " + engineer.getClass().getSimpleName(),
+                expectedExperience, engineer.getExperience());
     }
 
     @Test
     public void testConstructorSetsSkill() {
-        assertEquals(expectedSkill, engineer.getSkill());
+        assertEquals("Constructor did not set correct skill for " + engineer.getClass().getSimpleName(),
+                expectedSkill, engineer.getSkill());
     }
 }
