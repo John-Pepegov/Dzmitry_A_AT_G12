@@ -1,0 +1,20 @@
+https://spartak.by
+
+xpath: //div[@class='header__logo']
+css: .header__logo
+
+xpath: //*[@class='top-h-row']//*[@href='/partners/']/*
+css: .top-h-row [href='/partners/'] :first-child
+
+xpath: //*[@class='header__search']//*[@class='search fa search-btn lupa']
+css:
+
+
+
+
+
+
+
+https://mail.ru
+xpath:
+css:

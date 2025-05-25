@@ -8,7 +8,7 @@ public class ReadWrite6 {
     // читает текст из файла, считает в тексте количество символов и записывает результат в новый файл, имя которого строится по маске текущая_дата_время_количество
 
     public static void main(String[] args) {
-        File originalFile = new File("test_data/ReadWrite6.txt");
+        File originalFile = new File("read_write_data/ReadWrite6.txt");
         int charCount = 0;
 
         // Считаем символы, исключая '\r'
@@ -26,7 +26,7 @@ public class ReadWrite6 {
 
         // Формируем имя файла: дата_время_количество.txt
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String outputFileName = String.format("test_data/%s_%d.txt", timestamp, charCount);
+        String outputFileName = String.format("read_write_data/%s_%d.txt", timestamp, charCount);
         File newFile = new File(outputFileName);
 
         // Записываем результат

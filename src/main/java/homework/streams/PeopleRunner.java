@@ -6,8 +6,6 @@ import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
@@ -37,7 +35,7 @@ public class PeopleRunner {
 
         System.out.println("Средний возраст: " + avgAge);
 
-        File file = new File("test_data/People.txt");
+        File file = new File("read_write_data/People.txt");
 
         try (FileWriter writer = new FileWriter(file)) {
             writer.write("Средний возраст: " + avgAge);

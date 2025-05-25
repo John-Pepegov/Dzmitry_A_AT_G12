@@ -45,7 +45,7 @@ public class SandRunner {
         System.out.println("---------------------");
 
         // Отпечатать каждый из элементов карты в виде value:key в текстовый файл
-        File file = new File("test_data/Sand.txt");
+        File file = new File("read_write_data/Sand.txt");
 
         try (FileWriter writer = new FileWriter(file)) {
             for (Map.Entry<Integer, String> entry : sandMap.entrySet()) {
