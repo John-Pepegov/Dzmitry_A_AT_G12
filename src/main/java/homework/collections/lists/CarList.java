@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class CarList {
@@ -22,7 +21,7 @@ public class CarList {
         cars.add("Ауди");
 
         // Проитерировать список через for-each и отпечатать слова в файл cars с новой строки в кавычках
-        File file = new File("test_data/Cars.txt");
+        File file = new File("read_write_data/Cars.txt");
         try (FileWriter writer = new FileWriter(file)) {
             for (String car : cars) {
                 writer.write("\"" + car + "\"\n");

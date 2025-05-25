@@ -15,7 +15,7 @@ public class FigureList {
         ));
 
         // Проитерировать список через for-each и отпечатать слова в файл figures через тире
-        try (FileWriter writer = new FileWriter("test_data/Figures.txt")) {
+        try (FileWriter writer = new FileWriter("read_write_data/Figures.txt")) {
             boolean first = true;
             for (String figure : figures) {
                 if (!first) {

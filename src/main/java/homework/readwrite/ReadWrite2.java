@@ -11,7 +11,7 @@ public class ReadWrite2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("test_data/ReadWrite2.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("read_write_data/ReadWrite2.txt", true))) {
             while (true) {
                 System.out.print("Type your text here or type 'stop' to exit: ");
                 String incoming = scanner.nextLine();

@@ -6,7 +6,7 @@ public class ReadWrite4 {
     // читает текст из файла, убирает из него все согласные и записывает новый текст в тот же файл в конец, через пустую строку ниже оригинала
 
     public static void main(String[] args) {
-        File file = new File("test_data/ReadWrite4.txt");
+        File file = new File("read_write_data/ReadWrite4.txt");
         StringBuilder data = new StringBuilder();
 
         try (
