@@ -6,14 +6,37 @@ css: .header__logo
 xpath: //*[@class='top-h-row']//*[@href='/partners/']/*
 css: .top-h-row [href='/partners/'] :first-child
 
-xpath: //*[@class='header__search']//*[@class='search fa search-btn lupa']
-css:
+xpath: //*[@class='search fa search-btn lupa']
+css: .search.fa.search-btn.lupa
 
+xpath: //*[@class='top-h-row']//*[@href='/?special_version=Y']
+css: .top-h-row [href='/?special_version=Y']
 
+xpath: //*[@class='header__lang']/a[contains(text(),'Ru')]
+css: .header__lang :first-child
 
+xpath: //*[@class='header__lang']/a[contains(text(),'Ch')]
+css: .header__lang :last-child
 
+xpath: //*[@class='top-h-row']//*[@class='download-catalog']
+css: .top-h-row .download-catalog
 
+xpath://*[@class='top-h-row']//*[@href='/products/Impresso/']
+css: .top-h-row [href='/products/Impresso/']
 
+xpath: //*[@class='flex-next']
+css: .flex-next
+
+xpath: //*[@class='flex-control-nav flex-control-paging']//a[contains(text(),'2')]
+css: .flex-control-nav.flex-control-paging li:nth-of-type(2) a
+
+xpath: //*[@class='top_slider_wrapp']//*[@class='social_list']//a[@href='https://vk.com/spartakby']
+css: .top_slider_wrapp .social_list a[href='https://vk.com/spartakby']
+
+xpath: //*[@class='top_slider_wrapp']//*[@class='social_list']//*[contains(@href, 'youtube.com')]
+css: .top_slider_wrapp .social_list [href*='youtube.com']
+
+---------------------------------------------------------
 
 https://mail.ru
 xpath:
