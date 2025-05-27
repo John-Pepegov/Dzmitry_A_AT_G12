@@ -39,5 +39,36 @@ css: .top_slider_wrapp .social_list [href*='youtube.com']
 ---------------------------------------------------------
 
 https://mail.ru
-xpath:
-css:
+
+xpath: //*[@data-testid='whiteline-logo-item']
+css: [data-testid='whiteline-logo-item']
+
+xpath: //*[(contains(@href, 'cloud.mail.ru'))]
+css: [href*='cloud.mail.ru']
+
+xpath: //a[contains(@class, 'ph-project__register')]
+css: a.ph-project.ph-project__register
+
+xpath: //button[contains(@class, 'ph-login')]
+css: button.ph-login
+
+xpath: //button[@data-testid='search-button']
+css: button[data-testid='search-button']
+
+xpath: //a[@href='//lady.mail.ru/']
+css: a[href='//lady.mail.ru/']
+
+xpath: //*[@id='mailbox']//button[contains(@class, 'resplash-btn_primary')]
+css: #mailbox button[class*='resplash-btn_primary']
+
+xpath: //*[@id='mailbox']//a[contains(@href,'account.mail.ru/signup')]
+css: #mailbox a[href*='account.mail.ru/signup']
+
+xpath: //a[@href='https://calendar.mail.ru']
+css: a[href='https://calendar.mail.ru']
+
+xpath: //a[contains(@class, 'calendar-header__add-btn')]
+css: a.calendar-header__add-btn
+
+xpath: //div[contains(@class, 'news-main__text-wrapper')]
+css: div.news-main__text-wrapper
