@@ -73,7 +73,7 @@
                 <configuration>
                     <!-- TestNG XML file -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/config/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <!-- Автоматически запускать JUnit-тесты по шаблонам -->
                     <includes>
