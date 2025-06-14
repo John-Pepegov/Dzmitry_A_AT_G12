@@ -3,9 +3,9 @@ package classwork.cw_14_06_2025;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class LoggerClass {
+public class LoggerTest {
 
-    private static final Logger LOGGER = LogManager.getLogger(LoggerClass.class);
+    private static final Logger LOGGER = LogManager.getLogger(LoggerTest.class);
 
     public static void main(String[] args) {
         method1();
