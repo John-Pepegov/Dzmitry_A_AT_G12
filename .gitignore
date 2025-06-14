@@ -10,3 +10,5 @@
 /out
 /target
 /test-output
+/baz_log.json
+/db.properties

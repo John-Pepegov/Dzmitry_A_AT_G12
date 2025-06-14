@@ -1,4 +1,4 @@
-package classwork;
+package classwork.cw_27_05_2025;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

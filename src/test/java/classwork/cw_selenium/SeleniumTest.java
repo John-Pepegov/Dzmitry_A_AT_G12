@@ -1,4 +1,4 @@
-package classwork;
+package classwork.cw_selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
