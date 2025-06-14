@@ -1,14 +1,17 @@
 package myproject.steps;
 
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import myproject.driver.DriverManager;
 import myproject.objects.BookingDetails;
 import myproject.pages.ResultsPage;
 import myproject.pages.SearchPage;
-import io.cucumber.java.en.*;
-
-import static org.junit.Assert.assertEquals;
 
 import java.time.LocalDate;
+
+import static org.junit.Assert.assertEquals;
 
 public class BookingSteps {
 
@@ -17,14 +20,14 @@ public class BookingSteps {
     private String actualRating;
 
     @Given("I open the Booking search page")
-    public void i_open_booking_page() {
+    public void iOpenBookingSearchPage() {
         searchPage.openBookingApp();
         searchPage.rejectCookies();
         searchPage.closeSignInPopupIfVisible();
     }
 
     @When("I search hotels in {string} from {int} to {int} days ahead for {int} adults and {int} rooms")
-    public void i_search_hotels(String city, int startDays, int endDays, int adults, int rooms) {
+    public void iSearchHotels(String city, int startDays, int endDays, int adults, int rooms) {
         BookingDetails details = new BookingDetails();
         details.setCity(city);
         details.setCheckInDate(LocalDate.now().plusDays(startDays));
@@ -38,16 +41,15 @@ public class BookingSteps {
     }
 
     @And("I filter by 5-star hotels and sort by stars ascending")
-    public void i_filter_and_sort() {
+    public void iFilterAndSortByStars() {
         resultsPage.filterByFiveStars();
         resultsPage.sortByStarsAsc();
     }
 
     @Then("the first hotel rating should be {string}")
-    public void the_rating_should_be(String expectedRating) {
+    public void iCheckFirstHotelRating(String expectedRating) {
         actualRating = resultsPage.getFirstHotelRating();
         assertEquals("Expected hotel rating to be '" + expectedRating + "' but got '" + actualRating + "'",
                 expectedRating, actualRating);
     }
 }
-

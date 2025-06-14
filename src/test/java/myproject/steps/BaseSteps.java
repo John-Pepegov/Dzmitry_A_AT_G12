@@ -4,7 +4,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import myproject.driver.DriverManager;
 
-public class Hooks {
+public class BaseSteps {
 
     @Before
     public void initDriver() {
