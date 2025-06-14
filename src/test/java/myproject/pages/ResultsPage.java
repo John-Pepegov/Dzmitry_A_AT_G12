@@ -1,9 +1,7 @@
 package myproject.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,19 +15,6 @@ public class ResultsPage {
     public ResultsPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
-
-    public void closeSignInPopupIfVisible () {
-        try {
-            WebElement popupButton = wait.until(ExpectedConditions
-                    .presenceOfElementLocated(By.xpath("//button[@aria-label='Скрыть меню входа в аккаунт.']")));
-
-            if (popupButton.isDisplayed() && popupButton.isEnabled()) {
-                popupButton.click();
-            }
-        } catch (TimeoutException ignored) {
-            // Popup not shown — safe to continue
-        }
     }
 
     public void filterByFiveStars() {

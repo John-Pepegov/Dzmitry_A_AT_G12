@@ -27,11 +27,11 @@ public class BookingRatingTestNGTest extends BaseTestNGSteps {
 
         searchPage.openBookingApp();
         searchPage.rejectCookies();
+        searchPage.closeSignInPopupIfVisible();
         searchPage.enterSearchCriteria(data);
         searchPage.setGuests(data.getAdults(), data.getRooms());
         searchPage.submitSearch();
 
-        resultsPage.closeSignInPopupIfVisible();
         resultsPage.filterByFiveStars();
         resultsPage.sortByStarsAsc();
 

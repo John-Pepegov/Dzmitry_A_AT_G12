@@ -8,6 +8,6 @@ import myproject.tests.junit.BookingRatingJUnitTest; // Импортируйте
 @Suite.SuiteClasses({
     BookingRatingJUnitTest.class // Укажите здесь все ваши тестовые классы
 })
-public class JUnitSuiteRunner {
+public class JUnitRunner {
     // Этот класс остается пустым, используется только для запуска тестов в Suite
 }

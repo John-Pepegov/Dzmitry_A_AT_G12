@@ -21,7 +21,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.33.0</version>
         </dependency>
-
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -29,7 +28,6 @@
             <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
-
         <!-- JUnit 4 -->
         <dependency>
             <groupId>junit</groupId>
@@ -37,7 +35,19 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- Cucumber -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.23.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.23.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.maven.surefire</groupId>
             <artifactId>surefire-junit47</artifactId>

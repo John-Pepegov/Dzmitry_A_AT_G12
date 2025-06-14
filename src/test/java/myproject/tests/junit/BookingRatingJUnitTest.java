@@ -6,9 +6,9 @@ import myproject.pages.ResultsPage;
 import myproject.pages.SearchPage;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 import java.time.LocalDate;
+
+import static org.junit.Assert.assertEquals;
 
 public class BookingRatingJUnitTest extends BaseJUnitSteps {
 
@@ -26,11 +26,11 @@ public class BookingRatingJUnitTest extends BaseJUnitSteps {
 
         searchPage.openBookingApp();
         searchPage.rejectCookies();
+        searchPage.closeSignInPopupIfVisible();
         searchPage.enterSearchCriteria(data);
         searchPage.setGuests(data.getAdults(), data.getRooms());
         searchPage.submitSearch();
 
-        resultsPage.closeSignInPopupIfVisible();
         resultsPage.filterByFiveStars();
         resultsPage.sortByStarsAsc();
 
